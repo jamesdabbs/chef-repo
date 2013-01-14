@@ -1,0 +1,25 @@
+# -- Aliases --
+alias ls='ls --color=auto'
+alias la='ls -laFGh'
+alias lt='ls -ltr'
+alias l='ls -FG'
+
+alias grep='grep --color=auto'
+
+# -- Prompt --
+ LIGHT_RED="\[\033[1;31m\]"
+    YELLOW="\[\033[1;33m\]"
+     GREEN="\[\033[0;32m\]"
+      BLUE="\[\033[1;34m\]"
+COLOR_NONE="\[\e[0m\]"
+
+function set_bash_prompt() {
+  if test $? -eq 0 ; then
+    PROMPT_SYMBOL="$"
+  else
+    PROMPT_SYMBOL="${LIGHT_RED}\$${COLOR_NONE}"
+  fi
+
+  PS1="${BLUE}\u${COLOR_NONE} at ${GREEN}\h${COLOR_NONE} in ${YELLOW}\w${COLOR_NONE} $PROMPT_SYMBOL "
+}
+PROMPT_COMMAND=set_bash_prompt
