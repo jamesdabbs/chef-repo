@@ -56,7 +56,7 @@
   <import hidden-files="no">
     <scripting script-charset="UTF-8">
       <autoscan inotify="auto">
-        <directory location="/var/lib/transmission-daemon/downloads" mode="inotify" recursive="no" hidden-files="no"/>
+        <directory location="/var/lib/transmission-daemon/downloads" mode="timed" interval="3600" level="full" recursive="no" hidden-files="no"/>
       </autoscan>
       <common-script>/usr/share/mediatomb/js/common.js</common-script>
       <playlist-script>/usr/share/mediatomb/js/playlists.js</playlist-script>
