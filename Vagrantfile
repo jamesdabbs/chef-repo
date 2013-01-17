@@ -88,7 +88,7 @@ Vagrant::Config.run do |config|
     chef.chef_server_url = "https://api.opscode.com/organizations/jcd"
     chef.validation_key_path = ".chef/jcd-validator.pem"
     chef.validation_client_name = "jcd-validator"
-    chef.node_name = "vagrant"
+    chef.node_name = "Vagrant"
     chef.provisioning_path = "/etc/chef"
     chef.log_level = :info
 
