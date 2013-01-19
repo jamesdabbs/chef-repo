@@ -3,10 +3,10 @@ description 'Full bespoke configuration for a home server'
 
 recipes = %w{
   chef-client
-  jdabbs
   transmission
-  mediatomb
-  flexget flexget::cron
+  jdabbs
+  jdabbs::mediatomb
+  jdabbs::flexget
 }
 run_list recipes.map { |r| "recipe[#{r}]"}
 

@@ -4,14 +4,6 @@ python_pip "flexget" do
   action :install
 end
 
-plugins = %w{ transmissionrpc }
-
-plugins.each do |plugin|
-  python_pip plugin do
-    action :install
-  end
-end
-
 user = node['flexget']['user']
 
 directory "#{node['flexget']['home_dir']}/.flexget" do
@@ -35,4 +27,10 @@ template "#{node['flexget']['home_dir']}/.flexget/config.yml" do
   group user
   source "config.yml.erb"
   variables(:config => node['flexget']['config'])
+end
+
+cron "flexget" do
+  hour node['flexget']['cron_hours']
+  user node['flexget']['user']
+  command node['flexget']['cron_command']
 end
