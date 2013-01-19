@@ -5,8 +5,9 @@ recipes = %w{
   chef-client
   transmission
   jdabbs
-  jdabbs::mediatomb
   jdabbs::flexget
+  jdabbs::mediatomb
+  jdabbs::vlc
 }
 run_list recipes.map { |r| "recipe[#{r}]"}
 
