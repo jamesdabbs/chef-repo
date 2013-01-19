@@ -21,6 +21,15 @@ directory "#{node['flexget']['home_dir']}/.flexget" do
   action :create
 end
 
+['', 'This American Life', 'Radiolab', 'Comedy Bang! Bang!'].each do |dir|
+  directory "#{node['flexget']['home_dir']}/Podcasts/#{dir}" do
+    owner user
+    group user
+    mode "0755"
+    action :create
+  end
+end
+
 template "#{node['flexget']['home_dir']}/.flexget/config.yml" do
   owner user
   group user
