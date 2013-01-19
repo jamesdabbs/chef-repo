@@ -10,3 +10,7 @@ template "#{ENV['HOME']}/.bashrc" do
   source "bashrc.erb"
   mode   "0644"
 end
+
+package "tree" do
+  action :install
+end
