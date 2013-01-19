@@ -7,7 +7,7 @@ template "/etc/vlc/lua/http/.hosts" do
   source "vlc.hosts.erb"
   owner "root"
   group "root"
-  mode "0644"
+  mode 0644
 end
 
 # Set up the default media library
@@ -32,9 +32,9 @@ template "/home/james/alarm.m3u" do
   action :create_if_missing
 end
 
-# template "/etc/init/vlc.conf" do
-#   source "vlc.upstart.conf.erb"
-#   owner "root"
-#   group "root"
-#   mode "0644"
-# end
+template "/etc/init/vlc.conf" do
+  source "vlc.upstart.conf.erb"
+  owner "root"
+  group "root"
+  mode 0644
+end
