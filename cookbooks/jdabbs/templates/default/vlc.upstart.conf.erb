@@ -1,0 +1,12 @@
+description "vlc http daemon"
+
+start on runlevel [2345]
+stop on runlevel [016]
+
+console owner
+
+expect daemon
+
+script 
+    /usr/bin/vlc -I http --daemon
+end script
