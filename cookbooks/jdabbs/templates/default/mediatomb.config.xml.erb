@@ -55,9 +55,6 @@
   </server>
   <import hidden-files="no">
     <scripting script-charset="UTF-8">
-      <autoscan inotify="auto">
-        <directory location="/var/lib/transmission-daemon/downloads" mode="timed" interval="3600" level="full" recursive="no" hidden-files="no"/>
-      </autoscan>
       <common-script>/usr/share/mediatomb/js/common.js</common-script>
       <playlist-script>/usr/share/mediatomb/js/playlists.js</playlist-script>
       <virtual-layout type="builtin">
@@ -65,6 +62,9 @@
         <dvd-script>/usr/share/mediatomb/js/import-dvd.js</dvd-script>
       </virtual-layout>
     </scripting>
+    <autoscan inotify="auto">
+      <directory location="/var/lib/transmission-daemon/downloads" mode="timed" interval="3600" level="full" recursive="no" hidden-files="no"/>
+    </autoscan>
     <mappings>
       <extension-mimetype ignore-unknown="no">
         <map from="mp3" to="audio/mpeg"/>
