@@ -8,6 +8,7 @@ recipes = %w{
   jdabbs::flexget
   jdabbs::mediatomb
   jdabbs::vlc
+  samba::server
 }
 run_list recipes.map { |r| "recipe[#{r}]"}
 

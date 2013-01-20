@@ -1,0 +1,13 @@
+{
+  "id": "shares",
+  "shares": {
+    "downloads": {
+      "comment": "New downloads",
+      "path": "/home/james/Downloads",
+      "guest ok": "yes",
+      "write list": ["james"],
+      "create mask": "0664",
+      "directory mask": "0775"
+    }
+  }
+}
