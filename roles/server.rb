@@ -5,6 +5,7 @@ recipes = %w{
   chef-client
   transmission
   jdabbs
+  jdabbs::beets
   jdabbs::flexget
   jdabbs::mediatomb
   jdabbs::vlc
